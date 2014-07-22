@@ -1,3 +1,8 @@
+if !executable("vkg")
+	echo "vkg.vim needs vkg to be installed globally to work"
+	finish
+endif
+
 if exists("g:loaded_vkg")
 	finish
 endif
