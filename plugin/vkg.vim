@@ -67,8 +67,12 @@ fun! vkg#install( name ) "{{{
 endfun "}}}
 
 fun! vkg#uninstall( name ) "{{{
-	let output = system("vkg uninstall " . a:name)
-	echo output
+	let response = input("Do you want to uninstall " . a:name . "? y|n ")
+
+	if response == 'y'
+		let output = system("vkg uninstall " . a:name)
+		echo output
+	endif
 endfun "}}}
 
 fun! vkg#search( name ) "{{{
