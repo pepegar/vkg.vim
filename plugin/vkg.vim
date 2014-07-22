@@ -1,7 +1,7 @@
-"if exists("g:loaded_vkg")
-	"finish
-"endif
-"let g:loaded_vkg=0.1
+if exists("g:loaded_vkg")
+	finish
+endif
+let g:loaded_vkg=0.1
 
 " vkg helper functions ---------------------------------------------- {{{
 
