@@ -31,22 +31,26 @@ fun! s:VkgSettings() "{{{
 endfun "}}}
 
 fun! s:VkgSyntax() "{{{
-	syn match VkgStar '*'
-	syn match VkgPluginName '\* ([0-9A-Za-z\-]+) \-'
-
-	hi def link VkgStar Keyword
+	syn match VkgPluginName '\v\* ([0-9A-Za-z\-\.]+)'
 	hi def link VkgPluginName Identifier
 endfun "}}}
 
 fun! s:VkgMappings() "{{{
 	nnoremap <script> <silent> <buffer> <CR> :call <sid>VkgInstallCurrent()<CR>
-	nnoremap <script> <silent> <buffer> q execute ":q!"
+	nnoremap <script> <silent> <buffer> q :quit<cr>
+	nnoremap <script> <silent> <buffer> d :call <sid>VkgUnInstallCurrent()<cr>
 endfun "}}}
 
 fun! s:VkgInstallCurrent() "{{{
 	let line_parts = split(getline("."))
 
 	call vkg#install(line_parts[1])
+endfun "}}}
+
+fun! s:VkgUnInstallCurrent() "{{{
+	let line_parts = split(getline("."))
+
+	call vkg#uninstall(line_parts[1])
 endfun "}}}
 
 " }}}
