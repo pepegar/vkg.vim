@@ -1,0 +1,66 @@
+*vkg.txt*   Vkg lets you install plugins from inside Vim.
+
+Making Vim a little bit more 21st century.
+
+==============================================================================
+CONTENTS                                                      *Vkg-contents*
+
+    1. Intro ........................... |VkgIntro|
+    2. Commands ........................ |VkgCommands|
+        2.1 Search ..................... |VkgSearch|
+        2.2 Install .................... |VkgInstall|
+        2.3 Uninstall .................. |VkgUninstall|
+        2.4 List ....................... |VkgList|
+
+==============================================================================
+1. Intro                                                          *VkgIntro*
+
+vkg.vim, alongside vkg, solves one of the major pitfalls that Vim has in front
+of other new text editors such as SublimeText or Atom, package managing.
+Making discovering and installing plugins easier is 
+
+==============================================================================
+2. Commands                                                       *VkgCommands*
+
+The main interface with vkg.vim is the Vkg command. >
+
+    :Vkg <command>
+
+==============================================================================
+2.1. Search                                                       *VkgSearch*
+
+Search for plugins in the Vimawesome index directly from the Vim command line
+with: >
+
+    :Vkg search <plugin>
+
+==============================================================================
+2.2. Install                                                      *VkgInstall*
+
+Install plugins directly from the search result buffer >
+
+    * fugitive-vim - fugitive.vim: a Git wrapper so awesome, _ <CR>
+    * gundo - A git mirror of gundo.vim                      ^- cursor
+
+Or by calling the install subcommand passing a third argument with the name of
+the plugin you want to install: >
+
+    :Vkg install <plugin>
+
+==============================================================================
+2.3. Uninstall                                                    *VkgUninstall*
+
+You can easily uninstall a plugin from the list results buffer by just
+pressing the <d> letter >
+
+    * fugitive-vim - fugitive.vim: a Git wrapper so awesome, _ <d>
+    * gundo - A git mirror of gundo.vim                      ^- cursor
+
+==============================================================================
+2.4. List                                                         *VkgList*
+
+List all the installed plugins with the following command: >
+
+    :Vkg list
+
+==============================================================================
