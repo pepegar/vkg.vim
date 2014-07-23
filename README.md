@@ -5,6 +5,12 @@ vkg.vim is the vim plugin to control vkg directly from Vim.
 
 installation
 ------------
+_vkg.vim_ depends on vkg. If you haven't vkg installed in your system yet, install it:
+```
+npm install -g coffee-script #just in case you have not installed it yet
+npm install -g vkg
+```
+
 Temporal recomended installation method:
 ```
 cd ~/.vim/bundle
